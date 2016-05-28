@@ -1,11 +1,21 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-//var ReduxThunk = require('redux-thunk').default
+var db = new PouchDB('swatches');
+
+window.db = db;
 
 var App = React.createClass({
+  getInitialState: function() {
+    return {
+      swatches: []
+    }
+  },
+  addSwatch: function(color) {
+    
+  },
   render: function() {
-    return (<div>asdf</div>);
+    return (<div>asdfgh</div>);
   }
 });
 
