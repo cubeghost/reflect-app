@@ -1,10 +1,69 @@
 @import 'reset';
 
 body {
-  font-family:sans-serif;
+  font-family:'Helvetica Neue',sans-serif;
+  -webkit-font-smoothing:antialiased;
 }
 
 header {
+  width:100%;
+  text-align:center;
   background:#111;
   color:#fff;
+  padding:0.2em;
+  -webkit-user-select:none;
+  -webkit-app-region:drag;
+}
+
+.add-swatch {
+  padding:1em;
+}
+
+.swatch {
+  padding:1.5em;
+  position:relative;
+  display:flex;
+
+  .color {
+    flex:1 1 100%;
+    text-align:center;
+    font-size:14px;
+  }
+
+  .delete {
+    -webkit-appearance:none;
+    position:absolute;
+    font-size:16px;
+    right:1em;
+    top:50%;
+    transform:translateY(-50%);
+    border:0;
+    background-color:transparent;
+    color:rgba(20,20,20,0.75);
+    padding:0;
+    opacity:0;
+    transition:opacity 150ms ease-in-out,color 150ms ease-in-out;
+    &:focus {
+      outline:0;
+      color:rgba(20,20,20,1);
+    }
+  }
+
+  &.text-light {
+    color:rgba(255,255,255,1);
+
+    .delete {
+      color:rgba(255,255,255,0.75);
+      &:focus {
+        color:rgba(255,255,255,1);
+      }
+    }
+  }
+
+  &:hover {
+
+    .delete {
+      opacity:1;
+    }
+  }
 }

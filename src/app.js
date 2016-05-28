@@ -46,9 +46,13 @@ var App = React.createClass({
       return <Swatch key={swatch._id} dispatch={this.props.dispatch} swatch={swatch} />
     }.bind(this));
     return (<div>
-      <input type="text" value={this.state.current_color} onChange={this.handleTextInput} />
-      <button onClick={this.addSwatch}>add swatch</button>
-      {swatches}
+      <div className="add-swatch">
+        <input type="text" value={this.state.current_color} onChange={this.handleTextInput} />
+        <button onClick={this.addSwatch}>add swatch</button>
+      </div>
+      <div className="swatches">
+        {swatches}
+      </div>
     </div>);
   }
 });
