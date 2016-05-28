@@ -10,11 +10,11 @@ require('dotenv').load()
 
 function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600});
+  mainWindow = new BrowserWindow({width: 800, height: 600, titleBarStyle: 'hidden'});
 
   // and load the index.html of the app.
   if (process.env.NODE_ENV && process.env.NODE_ENV == 'development') {
-    mainWindow.loadURL(`file://${__dirname}/dev.html`);    
+    mainWindow.loadURL(`file://${__dirname}/dev.html`);
   } else {
     mainWindow.loadURL(`file://${__dirname}/index.html`);
   }
