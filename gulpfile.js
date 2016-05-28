@@ -11,7 +11,7 @@ var config = {
     js: './src/**/*'
   },
   dest: {
-    js: './build/app.js'
+    js: './build/'
   }
 }
 
