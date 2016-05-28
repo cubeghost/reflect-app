@@ -18,7 +18,7 @@ var config = {
 gulp.task('webpack', [], function() {
   return gulp.src(config.path.js)
     .pipe(stream(webpack_config))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest(config.dest.js));
 });
 
